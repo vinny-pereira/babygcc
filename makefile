@@ -1,12 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -g
 TARGET = bin/babygcc
-SOURCE = src/main.c
+SOURCES = src/main.c src/lexer.c
 
 all: $(TARGET)
 
-$(TARGET): $(SOURCE)
-	$(CC) $(CFLAGS) $(SOURCE) -o $(TARGET)
+$(TARGET): $(SOURCES)
+	$(CC) $(CFLAGS) $(SOURCES) -o $(TARGET)
 
 clean:
 	rm -f $(TARGET)
